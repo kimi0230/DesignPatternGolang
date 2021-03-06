@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestSampleFactory(t *testing.T) {
+func TestFactoryMethod(t *testing.T) {
 	tests := []struct {
 		name string
 		oper string
@@ -13,28 +13,28 @@ func TestSampleFactory(t *testing.T) {
 		want float32
 	}{
 		{
-			name: "SampleFactory Add",
+			name: "FactoryMethod Add",
 			oper: "+",
 			numA: 10,
 			numB: 120,
 			want: 130,
 		},
 		{
-			name: "SampleFactory Sub",
+			name: "FactoryMethod Sub",
 			oper: "-",
 			numA: 100,
 			numB: 110,
 			want: -10,
 		},
 		{
-			name: "SampleFactory Mul",
+			name: "FactoryMethod Mul",
 			oper: "*",
 			numA: 10,
 			numB: 110,
 			want: 1100,
 		},
 		{
-			name: "SampleFactory Div",
+			name: "FactoryMethod Div",
 			oper: "/",
 			numA: 10,
 			numB: 5,
