@@ -1,4 +1,4 @@
-# 大話設計模式 (Design Pattern)
+# 設計模式 (Design Pattern)
 
 基於 程杰-大話設計模式, 使用 Golang 來實現
 
