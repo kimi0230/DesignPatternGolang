@@ -1,4 +1,4 @@
-package SimpleFactory
+package factorymethod
 
 import (
 	"testing"
@@ -16,8 +16,8 @@ func TestSampleFactory(t *testing.T) {
 			name: "SampleFactory Add",
 			oper: "+",
 			numA: 10,
-			numB: 110,
-			want: 120,
+			numB: 120,
+			want: 130,
 		},
 		{
 			name: "SampleFactory Sub",
