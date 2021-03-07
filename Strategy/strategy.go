@@ -2,7 +2,6 @@
 Strategy 策略模式： 講可以互換的行為封裝起來, 並使用專接方式決定要使用何者
 用戶端實體化的事 CashContext 的物件, 調用的是 CashContext 的方法 GetResult
 使具體的收費演算法測底與用戶端分離
-
 */
 
 package strategy
