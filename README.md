@@ -4,6 +4,7 @@
 
 ## 生成模式 (Creational Patterns)
 * [Factory Method 工廠模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/FactoryMethod) 定義可滋生成物件的介面, 但讓子類別去決定該具現出哪一種類別的物件. 此模式讓類別將具現化程序交給子類別去處置
+* [Prototype 原型模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Prototype) 制定可用原型個體生成的物件類型, 爾後只需複製此原型即可生成新物件
 
 ## 結構模式 (Structural Patterns)
 * [Decorator 裝飾模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Decorator) 將額外權責動態附加於物件身上, 不必衍生子類別即可彈性擴增功能
