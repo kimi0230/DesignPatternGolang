@@ -12,3 +12,4 @@
 
 ## 行為模式 (Behavioral Patterns)
 * [Strategy 策略模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Strategy) 定義一整族演算法, 講每一個演算法封裝起來, 可互換使用, 更可在不影響外界的情況下個別抽換所以引用的演算法
+* [Template Method 範本方式模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/TemplateMethod) 對於操作, 只先定義好演算法的輪廓, 某些步驟則留給子類別去填飽, 以便在不改變演算法整體構造的情況下讓子類別去精煉某些步驟
