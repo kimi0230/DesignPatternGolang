@@ -1,7 +1,7 @@
 ### Builder 建造者模式:
 > 
 
-![UML](https://github.com/kimi0230/DesignPatternGolang/tree/master/UML/Builder.png)
+![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Builder.png?raw=true)
 
 將一個複雜物件的構建與他的表示分離, 使得同樣的構建過程可以建立不同的表示
 
