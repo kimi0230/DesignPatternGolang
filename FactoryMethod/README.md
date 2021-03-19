@@ -8,3 +8,5 @@
 
 
 > Ex: 計算機
+
+![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Factory.png?raw=true)
