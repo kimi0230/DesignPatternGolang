@@ -3,3 +3,5 @@
     
 定義一個操作中的演算法的骨架, 而將一些步驟延遲到子類別中.
 範本方式使得子類別可以不改變一個演算法的結構即可重定義該演算法的某些特定步驟
+
+![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/TemplateMethod.png?raw=true)

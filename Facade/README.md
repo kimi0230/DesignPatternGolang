@@ -11,3 +11,5 @@ Mediator 中介者模式、外觀模式：每個對像都保存一份中介者�
 將其封裝在外觀對像中，給客戶端一種只有一個對象的感覺，
 外觀模式是一結構型模式，
 中介者模式是一行為性模式
+
+![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Facade.png?raw=true)
