@@ -203,31 +203,31 @@ type DataAccess struct {
 	db string
 }
 
-func (d *DataAccess) CreateUser(db string) IUser {
+func (d *DataAccess) CreateUser() IUser {
 	if d == nil {
 		return nil
 	}
 
 	var u IUser
 
-	if db == "sqlserver" {
+	if d.db == "sqlserver" {
 		u = new(SqlServerUser)
-	} else if db == "access" {
+	} else if d.db == "access" {
 		u = new(AccessUser)
 	}
 	return u
 }
 
-func (d *DataAccess) CreateDepartment(db string) IDepartment {
+func (d *DataAccess) CreateDepartment() IDepartment {
 	if d == nil {
 		return nil
 	}
 
 	var u IDepartment
 
-	if db == "sqlserver" {
+	if d.db == "sqlserver" {
 		u = new(SqlServerDepartment)
-	} else if db == "access" {
+	} else if d.db == "access" {
 		u = new(AccessDepartment)
 	}
 	return u

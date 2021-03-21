@@ -18,14 +18,15 @@ func TestAbstractFactory(t *testing.T) {
 
 	// 簡單工廠+抽象工廠
 	fmt.Println("---------- 簡單工廠+抽象工廠")
-	data := DataAccess{}
+	data := DataAccess{"access"}
 
-	iU := data.CreateUser("access")
+	iU := data.CreateUser()
 	iU.Insert(&uData)
 	gU := iU.GetUser(1)
 	fmt.Println(gU)
 
-	iD := data.CreateDepartment("sqlserver")
+	data2 := DataAccess{"sqlserver"}
+	iD := data2.CreateDepartment()
 	iD.Insert(&dData)
 	gD := iD.GetDepartment(1)
 	fmt.Println(gD)
