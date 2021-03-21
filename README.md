@@ -21,3 +21,4 @@
 * [Strategy 策略模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Strategy) 定義一整組演算法, 講每一個演算法封裝起來, 可互換使用, 更可在不影響外界的情況下個別抽換所以引用的演算法
 * [Template Method 範本方式模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/TemplateMethod) 對於操作, 只先定義好演算法的輪廓, 某些步驟則留給子類別去填飽, 以便在不改變演算法整體構造的情況下讓子類別去精煉某些步驟
 * [Observer 觀察者模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Observer) 定義一對多的物件依存關係, 讓物件狀態一有變動, 就自動通知其他相依物件做該做的更新動作
+* [State 狀態模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/State) 讓物件的外顯行為隨內部狀態的改變而改變, 彷彿連類別也變了似的
