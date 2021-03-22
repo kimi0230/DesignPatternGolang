@@ -15,6 +15,7 @@
 * [Decorator 裝飾模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Decorator) 將額外權責動態附加於物件身上, 不必衍生子類別即可彈性擴增功能
 * [Proxy 代理模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Proxy) 替其他物件預留代理者空位, 就此控制存取其他物件
 * [Facade 外觀模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Facade) 替子系統裡的一堆介面定義一套統一的高階介面, 讓子系統更容易使用
+* [Adapter 轉接器模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Adapter) 將類別的介面轉換成外界所預期的另一種介面, 讓原先囿於見面不相容問題而無法協力合作的類別能夠兜在一起用
 
 ## 行為模式 (Behavioral Patterns)
 模述類別和物件如何互動，以及各自的責任

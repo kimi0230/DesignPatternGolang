@@ -9,9 +9,9 @@
 可以把複雜的判斷邏輯簡化
 
 State 的 UML 與策略模式相似
-* 策略模式: 
+* [Strategy 策略模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Strategy): 
     是用在對多個做同樣事情（統一接口）的類對象的選擇上
-* 狀態模式：
+* [State 狀態模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/State)
     將對某個事情的處理過程抽象成接口和實現類的形式，
     由context保存一份state，在state實現類處理事情時，修改狀態傳遞給context， 由context繼續傳遞到下一個狀態處理中，
 
