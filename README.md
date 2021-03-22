@@ -23,3 +23,4 @@
 * [Template Method 範本方式模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/TemplateMethod) 對於操作, 只先定義好演算法的輪廓, 某些步驟則留給子類別去填飽, 以便在不改變演算法整體構造的情況下讓子類別去精煉某些步驟
 * [Observer 觀察者模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Observer) 定義一對多的物件依存關係, 讓物件狀態一有變動, 就自動通知其他相依物件做該做的更新動作
 * [State 狀態模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/State) 讓物件的外顯行為隨內部狀態的改變而改變, 彷彿連類別也變了似的
+* [Memento 備忘錄模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Memento) 在不違反封裝性的前提下, 捕捉物件的內部狀態並存在外面,以便日後回復至此一狀態
