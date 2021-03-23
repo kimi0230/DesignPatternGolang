@@ -3,5 +3,7 @@
 
 將物件組合成樹形結構以表示 部分-整體的層次結構. 組合模式使得用戶對單個物件和組合物件的使用具有一致性
 
+* 何時使用組合模式
+需求中是表現部分與整體曾是的結構時, 以及你希望用戶可以忽略組合物件與單個物件的不同, 統一地使用組合結構中的所有物件時, 就應該考慮組合模式.
 
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Composite.png?raw=true)
