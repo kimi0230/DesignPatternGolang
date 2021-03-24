@@ -25,3 +25,4 @@
 * [Observer 觀察者模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Observer) 定義一對多的物件依存關係, 讓物件狀態一有變動, 就自動通知其他相依物件做該做的更新動作
 * [State 狀態模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/State) 讓物件的外顯行為隨內部狀態的改變而改變, 彷彿連類別也變了似的
 * [Memento 備忘錄模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Memento) 在不違反封裝性的前提下, 捕捉物件的內部狀態並存在外面,以便日後回復至此一狀態
+* [Iterator 迭代氣模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Iterator) 無需知曉聚合物件的內部細節, 即可依序存取內含的每一個元素
