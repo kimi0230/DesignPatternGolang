@@ -18,6 +18,7 @@
 * [Facade 外觀模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Facade) 替子系統裡的一堆介面定義一套統一的高階介面, 讓子系統更容易使用
 * [Adapter 轉接器模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Adapter) 將類別的介面轉換成外界所預期的另一種介面, 讓原先囿於見面不相容問題而無法協力合作的類別能夠兜在一起用
 * [Composite 組合模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Composite) 將物件組織成樹狀結構, 部分-全體 層級關係, 讓外界以一致性的方式對待個別物件和整體物件
+* [Bridge 橋接模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Bridge) 將實作體系與抽象體系分離開來, 讓兩者能各自更動各自演進
 
 ## 行為模式 (Behavioral Patterns)
 模述類別和物件如何互動，以及各自的責任
