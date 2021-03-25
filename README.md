@@ -9,6 +9,7 @@
 * [Prototype 原型模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Prototype) 制定可用原型個體生成的物件類型, 爾後只需複製此原型即可生成新物件
 * [Builder 建造者模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Builder) 從複雜物件的佈局中抽取出生成程序, 以便用同一個生成程序製造各種不同的物件佈局
 * [Abstract Factory 抽象工廠模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/AbstractFactory) 以同一個介面來建立一整組相關或相依的物件, 不需要點名個物件真正所屬的具象類別
+* [Singleton 獨體模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Singleton) 確保類別只會有一個物件實體存在, 並提供單一存取窗口
 
 ## 結構模式 (Structural Patterns)
 讓你合成類別或物件到大型的結構
