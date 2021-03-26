@@ -29,3 +29,4 @@
 * [Memento 備忘錄模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Memento) 在不違反封裝性的前提下, 捕捉物件的內部狀態並存在外面,以便日後回復至此一狀態
 * [Iterator 迭代器模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Iterator) 無需知曉聚合物件的內部細節, 即可依序存取內含的每一個元素
 * [Command 命令模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Command) 將訊息封裝成物件, 以便能用各種不同訊息, 暫佇, 紀律, 復原等方式加以參數化處理
+* [Chain of Responsibility 職責鏈模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/ChainofResponsibility) 讓多個物件都有機會處理某一訊息, 以降低訊息發送者和接收者之間的耦合關係. 它將接收者物件串連起來, 讓訊息流經其中, 直到被處理了為止
