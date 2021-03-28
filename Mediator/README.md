@@ -3,4 +3,7 @@
 
 用一個仲介物件來封裝一系列的物件互動. 仲介者使各個物件不需要顯示地互相參考, 從而使其耦合鬆散, 而可以獨立低改變他們之間的互動
 
+如果不存在擴展情況, Mediator 可以與 ConcreteMediator合二為一;
+當系統出現了"多對多"互動複查的物件群時, 不要急著使用仲介者模式.
+
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Mediator.png?raw=true)
