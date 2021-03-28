@@ -30,3 +30,4 @@
 * [Iterator 迭代器模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Iterator) 無需知曉聚合物件的內部細節, 即可依序存取內含的每一個元素
 * [Command 命令模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Command) 將訊息封裝成物件, 以便能用各種不同訊息, 暫佇, 紀律, 復原等方式加以參數化處理
 * [Chain of Responsibility 職責鏈模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/ChainofResponsibility) 讓多個物件都有機會處理某一訊息, 以降低訊息發送者和接收者之間的耦合關係. 它將接收者物件串連起來, 讓訊息流經其中,直到被處理了為止
+* [Mediator 仲介者模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Mediator) 定義可將一群物件互動方式封裝起來的物件. 因為物件彼此不直接相互指涉, 所以耦合性低, 容易逐一變更互動關係
