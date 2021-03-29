@@ -45,7 +45,7 @@ func (f *FlyweightFactory) Flyweight(name string) Flyweight {
 		return nil
 	}
 	if _, ok := f.flyweights[name]; !ok {
-		return nil
+		f.flyweights[name] = &ConcreteFlyweight{name}
 	}
 	return f.flyweights[name]
 }
