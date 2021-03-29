@@ -5,5 +5,6 @@
 
 如果不存在擴展情況, Mediator 可以與 ConcreteMediator合二為一;
 當系統出現了"多對多"互動複查的物件群時, 不要急著使用仲介者模式.
+仲介者模式一般應用於一組物件以定義良好但是複雜的方式進行通訊的場合, 以及想訂製一個分布在多個類別中的行為, 而又不想產生太多子類別的場合
 
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Mediator.png?raw=true)
