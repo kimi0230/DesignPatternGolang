@@ -3,6 +3,8 @@
 基於 程杰-大話設計模式 和 Design Patterns: Elements of Reusable Object-Oriented Software. 
 使用 Golang 來實現
 
+---
+
 ## 生成模式 (Creational Patterns)
 > 牽涉到將物件實體化。這類模式都提供一個方法，將客戶從所需要實體化的物件中鬆綁出來
 
@@ -20,6 +22,8 @@
 
 ### [Singleton 獨體模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Singleton) 
 確保類別只會有一個物件實體存在, 並提供單一存取窗口
+
+---
 
 ## 結構模式 (Structural Patterns)
 > 讓你合成類別或物件到大型的結構
@@ -45,6 +49,7 @@
 ### [Flyweight 享元模式：](https://github.com/kimi0230/DesignPatternGolang/tree/master/Flyweight) 
 以共享機制有效地支援一大堆小規模的物件
 
+---
 ## 行為模式 (Behavioral Patterns)
 > 模述類別和物件如何互動，以及各自的責任
 
@@ -77,3 +82,6 @@
 
 ### [Interpreter 解譯器模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Interpreter) 
 針對標的語言定義文法, 以及可解讀這個語句的解譯器
+
+### [Visitor 訪問者模式:](https://github.com/kimi0230/DesignPatternGolang/tree/master/Visitor) 
+定義能逐一施行於物件結構裡各個元素的操作, 讓你不必修改作用對象的類別介面, 就能定義新的操作
