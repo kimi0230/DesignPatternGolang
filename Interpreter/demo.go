@@ -33,20 +33,18 @@ type IExpression interface {
 type Expression struct {
 }
 
+// Interpret : 解釋器, 參數多帶一個IExpression 讓繼承的可以使用他的Execute
 func (e *Expression) Interpret(context *PlayContext, ie IExpression) {
-	// fmt.Println("context.Text() ", context.Text())
 	if len(context.Text()) == 1 {
 		return
 	}
 	playKey := context.Text()[0:1]
 	context.SetText(context.Text()[2:])
 	spaceIndex := strings.Index(context.Text(), " ")
-	// fmt.Println("spaceIndex ", spaceIndex)
 	if spaceIndex < 0 {
 		spaceIndex = 0
 	}
 	playVal, _ := strconv.Atoi(string(context.Text()[0:spaceIndex]))
-	// fmt.Println("playVal", string(context.Text()[0]))
 	context.SetText(context.Text()[strings.Index(context.Text(), " ")+1:])
 
 	ie.Execute(playKey, playVal)
@@ -81,7 +79,7 @@ func (n *Note) Execute(key string, val int) {
 	case "B":
 		note = "7"
 	}
-	fmt.Printf("%s", note)
+	fmt.Printf("%s ", note)
 }
 
 type Scale struct {
@@ -102,5 +100,25 @@ func (s *Scale) Execute(key string, val int) {
 	case 3:
 		scale = "高音"
 	}
-	fmt.Printf("%s", scale)
+	fmt.Printf("%s ", scale)
+}
+
+type Speed struct {
+	Expression
+}
+
+func NewSpeed() *Speed {
+	return &Speed{Expression{}}
+}
+
+func (s *Speed) Execute(key string, val int) {
+	var speed string
+	if val < 500 {
+		speed = "快速"
+	} else if val >= 1000 {
+		speed = "慢速"
+	} else {
+		speed = "中速"
+	}
+	fmt.Printf("%s ", speed)
 }
