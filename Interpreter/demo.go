@@ -26,16 +26,16 @@ func (c *PlayContext) SetText(str string) {
 
 // 運算式類別 AbstractExpression
 type IExpression interface {
-	Interpret(*PlayContext)
+	Interpret(*PlayContext, IExpression)
 	Execute(key string, val int)
 }
 
 type Expression struct {
 }
 
-func (e *Expression) Interpret(context *PlayContext) {
-	fmt.Println("context.Text() ", context.Text())
-	if len(context.Text()) == 0 {
+func (e *Expression) Interpret(context *PlayContext, ie IExpression) {
+	// fmt.Println("context.Text() ", context.Text())
+	if len(context.Text()) == 1 {
 		return
 	}
 	playKey := context.Text()[0:1]
@@ -49,20 +49,10 @@ func (e *Expression) Interpret(context *PlayContext) {
 	// fmt.Println("playVal", string(context.Text()[0]))
 	context.SetText(context.Text()[strings.Index(context.Text(), " ")+1:])
 
-	e.Execute(playKey, playVal)
+	ie.Execute(playKey, playVal)
 }
 
 func (e *Expression) Execute(key string, val int) {
-	scale := ""
-	switch val {
-	case 1:
-		scale = "低音"
-	case 2:
-		scale = "中音"
-	case 3:
-		scale = "高音"
-	}
-	fmt.Println(scale)
 }
 
 type Note struct {
@@ -91,7 +81,7 @@ func (n *Note) Execute(key string, val int) {
 	case "B":
 		note = "7"
 	}
-	fmt.Println(note)
+	fmt.Printf("%s", note)
 }
 
 type Scale struct {
@@ -112,5 +102,5 @@ func (s *Scale) Execute(key string, val int) {
 	case 3:
 		scale = "高音"
 	}
-	fmt.Println(scale)
+	fmt.Printf("%s", scale)
 }
