@@ -8,14 +8,10 @@ func TestDecorator(t *testing.T) {
 	tests := []struct {
 		name       string
 		personName string
-		decorator1 interface{}
-		decorator2 interface{}
 	}{
 		{
 			name:       "TestStrategy 正常收費",
 			personName: "kimi",
-			decorator1: new(TShirts),
-			decorator2: new(BigTrouser),
 		},
 	}
 
