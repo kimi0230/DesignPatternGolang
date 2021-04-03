@@ -3,4 +3,7 @@
 
 表示一個作用於某物件結構中的各元素之操作. 他使你可以在不改變各元素之類別的前提下, 定義作用於這些元素的新操作
 
+訪問者增加具體的 Element 是困難的, 但增加依賴於複雜物件結構的構建的操作就變得容易. 
+僅需要增加一個新的訪問者, 即可在一個物件結構上定義一個新操作
+
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Visitor.png?raw=true)
