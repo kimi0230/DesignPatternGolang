@@ -34,7 +34,7 @@ func (w *WorkExperience) Clone() *WorkExperience {
 	}
 	// 淺複製, 複製結構, 但不複製值
 	shallowObj := w
-	fmt.Printf("shallowObj: %p,w:  %p", &shallowObj, w)
+	fmt.Printf("shallowObj: %p, orgObj:  %p \n", &shallowObj, w)
 	return shallowObj
 }
 
@@ -84,6 +84,8 @@ func (r *Resume) Display() {
 }
 
 // Clone 深複製履歷
+// 淺複製: 被複製物件的所有變數都含有與原來的物件相同的值, 而所有的對其物件的參考都能指向
+// 深複製: 把參考物件的變數指向複製過的新物件, 而不是原有他被參考的物件
 func (r *Resume) Clone() *Resume {
 	// 深複製
 	var obj = new(Resume)
@@ -93,9 +95,9 @@ func (r *Resume) Clone() *Resume {
 	obj.sex = r.sex
 	return obj
 
-	// 淺複製
+	// 淺複製 : 會導致來源的值也被更改
 	// shallowObj := r
-	// shallowObj.name = "kl"
+	// shallowObj.name = "我改～"
 	// shallowObj.work = *(r.work).Clone()
 	// return shallowObj
 }
