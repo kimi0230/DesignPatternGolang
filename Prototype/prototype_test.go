@@ -14,7 +14,7 @@ func TestPrototype(t *testing.T) {
 	fmt.Println("")
 
 	cloneresume := resume.Clone()
-	cloneresume.SetPersonalInfo("男", "27")
+	cloneresume.SetPersonalInfo("女", "18")
 	cloneresume.SetWorkExperience("2018-2021", "GBA")
 	cloneresume.Display()
 	fmt.Println("")
