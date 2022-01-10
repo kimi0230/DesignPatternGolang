@@ -11,3 +11,75 @@ ex: 雁群/雁, 在雁群類別中有雁陣列物件
 ex: 鳥/翅膀, 在鳥類別中初始化時, 實體翅膀同時產生
 
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Bridge.png?raw=true)
+
+### Example
+
+```go
+package bridge
+
+import "fmt"
+
+// HandsetSoft: 手機軟體 Implementor
+type HandsetSoft interface {
+	Run()
+}
+
+// HandsetGame : 手機遊戲 ConcreteImplementorA
+type HandsetGame struct{}
+
+func (h *HandsetGame) Run() {
+	fmt.Println("執行手機遊戲")
+}
+
+// HandsetAddressList : 手機通訊錄 ConcreteImplementorB
+type HandsetAddressList struct {
+}
+
+func (h *HandsetAddressList) Run() {
+	fmt.Println("執行手機通訊錄")
+}
+
+// HandsetBrand : 手機品牌 Abstraction
+type HandsetBrand interface {
+	SetHandsetSoft(HandsetSoft)
+	Run()
+}
+
+// HandsetBrandN : RefinedAbstraction
+type HandsetBrandN struct {
+	soft HandsetSoft
+}
+
+func (h *HandsetBrandN) SetHandsetSoft(software HandsetSoft) {
+	if h == nil {
+		return
+	}
+	h.soft = software
+}
+
+func (h *HandsetBrandN) Run() {
+	if h == nil {
+		return
+	}
+	h.soft.Run()
+}
+
+// HandsetBrandM : RefinedAbstraction
+type HandsetBrandM struct {
+	soft HandsetSoft
+}
+
+func (h *HandsetBrandM) SetHandsetSoft(software HandsetSoft) {
+	if h == nil {
+		return
+	}
+	h.soft = software
+}
+
+func (h *HandsetBrandM) Run() {
+	if h == nil {
+		return
+	}
+	h.soft.Run()
+}
+```
