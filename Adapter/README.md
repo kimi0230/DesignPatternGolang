@@ -12,6 +12,7 @@
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Adapter.png?raw=true)
 
 ### Example
+https://github.com/kimi0230/DesignPatternGolang/tree/master/Adapter
 
 ```go
 package adapter
