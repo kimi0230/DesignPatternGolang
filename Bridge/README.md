@@ -13,6 +13,7 @@ ex: 鳥/翅膀, 在鳥類別中初始化時, 實體翅膀同時產生
 ![UML](https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Bridge.png?raw=true)
 
 ### Example
+https://github.com/kimi0230/DesignPatternGolang/tree/master/Bridge
 
 ```go
 package bridge
