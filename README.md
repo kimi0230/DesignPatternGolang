@@ -3,6 +3,8 @@
 基於 程杰-大話設計模式 和 Design Patterns: Elements of Reusable Object-Oriented Software. 
 使用 Golang 來實現
 
+https://kimi0230.github.io/DesignPatternGolang/
+
 ---
 
 ## 生成模式 (Creational Patterns)
