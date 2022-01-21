@@ -1,0 +1,123 @@
+{
+    "title": "Kimi's Golang Notes",
+    "description": "My gitbook for Golang, Leetcode, Interview",
+    "author": "Kimi Tsai <kimi0230@gmail.com>",
+    "ignores": [
+        "node_modules"
+    ],
+    "links": {
+        "sidebar": {
+            "Home": "https://kimi0230.github.io/MyGoNote/",
+            "GitHub": "https://github.com/kimi0230/MyGoNote",
+            "Medium": "https://medium.com/@kimi0230",
+            "About me": "https://github.com/kimi0230"
+        }
+    },
+    "plugins": [
+        "-search",
+        "-lunr",
+        "search-plus",
+        "-sharing",
+        "sharing-plus",
+        "expandable-chapters",
+        "splitter",
+        "-anchor-navigation-ex",
+        "-toggle-chapters",
+        "back-to-top-button",
+        "page-footer-ex",
+        "favicon-absolute",
+        "github",
+        "github-buttons",
+        "-disqus",
+        "-codeblock-filename",
+        "code",
+        "-copy-code-button",
+        "-emphasize",
+        "page-toc",
+        "intopic-toc",
+        "-tbfed-pagefooter",
+        "edit-link",
+        "auto-scroll-table",
+        "wide-page",
+        "tags"
+    ],
+    "pluginsConfig": {
+        "favicon-absolute": {
+            "favicon": "/favicon.ico",
+            "bookmark": "/bookmark.ico",
+            "appleTouchIcon152": "/apple-touch-icon-152.png",
+            "appleTouchIconPrecomposed152": "/apple-touch-icon-precomposed-152.png",
+            "appleTouchIconMore": {
+                "120x120": "/apple-touch-icon-120.png",
+                "180x180": "/apple-touch-icon-180.png"
+            },
+            "appleTouchIconPrecomposedMore": {
+                "120x120": "/apple-touch-icon-precomposed-120.png",
+                "180x180": "/apple-touch-icon-precomposed-180.png"
+            }
+        },
+        "expandable-chapters": {
+            "mode": "pageTop",
+            "showGoTop": true
+        },
+        "github": {
+            "url": "https://github.com/kimi0230"
+        },
+        "github-buttons": {
+            "buttons": [
+                {
+                    "user": "kimi0230",
+                    "repo": "MyGoNote",
+                    "type": "star",
+                    "size": "small"
+                }
+            ]
+        },
+        "sharing": {
+            "facebook": true,
+            "twitter": true,
+            "google": false,
+            "weibo": false,
+            "instapaper": false,
+            "vk": false,
+            "line": true,
+            "all": [
+                "facebook",
+                "google",
+                "twitter",
+                "weibo",
+                "instapaper",
+                "line"
+            ]
+        },
+        "intopic-toc": {
+            "label": "CONTENTS"
+        },
+        "disqus": {
+            "shortName": "Kimi's Gitbook"
+        },
+        "page-footer-ex": {
+            "copyright": "&copy Kimi Tsai all right reserved.",
+            "markdown": false,
+            "update_label": "<i>Updated</i> : ",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "edit-link": {
+            "base": "https://github.com/kimi0230/MyGoNote/edit/main/",
+            "label": "Edit"
+        }
+    },
+    "pdf": {
+        "pageNumbers": true,
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+            "right": 62,
+            "left": 62,
+            "top": 36,
+            "bottom": 36
+        },
+        "headerTemplate": null,
+        "footerTemplate": null
+    }
+}
