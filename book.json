@@ -1,14 +1,14 @@
 {
-    "title": "Kimi's Golang Notes",
-    "description": "My gitbook for Golang, Leetcode, Interview",
+    "title": "Kimi's DesignPatternGolang  Notes",
+    "description": "My gitbook for DesignPatternGolang ",
     "author": "Kimi Tsai <kimi0230@gmail.com>",
     "ignores": [
         "node_modules"
     ],
     "links": {
         "sidebar": {
-            "Home": "https://kimi0230.github.io/MyGoNote/",
-            "GitHub": "https://github.com/kimi0230/MyGoNote",
+            "Home": "https://kimi0230.github.io/DesignPatternGolang/",
+            "GitHub": "https://github.com/kimi0230/DesignPatternGolang",
             "Medium": "https://medium.com/@kimi0230",
             "About me": "https://github.com/kimi0230"
         }
@@ -67,7 +67,7 @@
             "buttons": [
                 {
                     "user": "kimi0230",
-                    "repo": "MyGoNote",
+                    "repo": "DesignPatternGolang",
                     "type": "star",
                     "size": "small"
                 }
@@ -103,7 +103,7 @@
             "update_format": "YYYY-MM-DD HH:mm:ss"
         },
         "edit-link": {
-            "base": "https://github.com/kimi0230/MyGoNote/edit/main/",
+            "base": "https://github.com/kimi0230/DesignPatternGolang/edit/main/",
             "label": "Edit"
         }
     },
