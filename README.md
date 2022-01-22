@@ -1,5 +1,5 @@
 # 設計模式 (Design Pattern)
-
+[![Build latest tag](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/releace.yml/badge.svg)](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/releace.yml) [![Build my gitbook and deploy to gh-pages](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/build.yml/badge.svg)](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/build.yml) [![pages-build-deployment](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/kimi0230/DesignPatternGolang/actions/workflows/pages/pages-build-deployment)
 基於 程杰-大話設計模式 和 Design Patterns: Elements of Reusable Object-Oriented Software. 
 使用 Golang 來實現
 
