@@ -34,7 +34,12 @@ func BenchmarkSingletonOnce(b *testing.B) {
 }
 
 /*
-go test -benchmem -run=none DesignPatternGolang/Singleton/ -bench=.
-BenchmarkSingleton-8            425317406                3.655 ns/op           0 B/op          0 allocs/op
-BenchmarkSingletonOnce-8        679671385                1.857 ns/op           0 B/op          0 allocs/op
+goos: darwin
+goarch: amd64
+pkg: DesignPatternGolang/Singleton
+cpu: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz
+BenchmarkSingleton-4            401843040                2.971 ns/op           0 B/op          0 allocs/op
+BenchmarkSingletonOnce-4        581861808                2.129 ns/op           0 B/op          0 allocs/op
+PASS
+ok      DesignPatternGolang/Singleton   2.960s
 */
