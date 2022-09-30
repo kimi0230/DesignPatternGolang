@@ -39,7 +39,8 @@
         "edit-link",
         "auto-scroll-table",
         "wide-page",
-        "tags"
+        "tags",
+        "sitemap"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -105,6 +106,9 @@
         "edit-link": {
             "base": "https://github.com/kimi0230/DesignPatternGolang/edit/main/",
             "label": "Edit"
+        },
+        "sitemap": {
+            "hostname": "https://kimi0230.github.io/"
         }
     },
     "pdf": {
