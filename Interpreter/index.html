@@ -1,0 +1,779 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Interpreter · Kimi's DesignPatternGolang  Notes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kimi Tsai <kimi0230@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Iterator/" />
+    
+    
+    <link rel="prev" href="../Flyweight/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"kimi0230","repo":"DesignPatternGolang","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    
+        <link rel="bookmark" href="/bookmark.ico" type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png">
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
+        
+    
+    
+        
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-precomposed-120.png">
+        
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed-180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://kimi0230.github.io/DesignPatternGolang/" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/kimi0230/DesignPatternGolang" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://medium.com/@kimi0230" target="_blank" class="custom-link">Medium</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/kimi0230" target="_blank" class="custom-link">About me</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../AbstractFactory/">
+            
+                <a href="../AbstractFactory/">
+            
+                    
+                    Abstract Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Adapter/">
+            
+                <a href="../Adapter/">
+            
+                    
+                    Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Bridge/">
+            
+                <a href="../Bridge/">
+            
+                    
+                    Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Builder/">
+            
+                <a href="../Builder/">
+            
+                    
+                    Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ChainofResponsibility/">
+            
+                <a href="../ChainofResponsibility/">
+            
+                    
+                    Chainof Responsibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Command/">
+            
+                <a href="../Command/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Composite/">
+            
+                <a href="../Composite/">
+            
+                    
+                    Composite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Decorator/">
+            
+                <a href="../Decorator/">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Facade/">
+            
+                <a href="../Facade/">
+            
+                    
+                    Facade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../FactoryMethod/">
+            
+                <a href="../FactoryMethod/">
+            
+                    
+                    Factory Method
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../FactoryMethod/SimplevsFactory/">
+            
+                <a href="../FactoryMethod/SimplevsFactory/">
+            
+                    
+                    Simplevs Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Flyweight/">
+            
+                <a href="../Flyweight/">
+            
+                    
+                    Flyweight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Interpreter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Iterator/">
+            
+                <a href="../Iterator/">
+            
+                    
+                    Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Mediator/">
+            
+                <a href="../Mediator/">
+            
+                    
+                    Mediator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Memento/">
+            
+                <a href="../Memento/">
+            
+                    
+                    Memento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../Observer/">
+            
+                <a href="../Observer/">
+            
+                    
+                    Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../Prototype/">
+            
+                <a href="../Prototype/">
+            
+                    
+                    Prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../Proxy/">
+            
+                <a href="../Proxy/">
+            
+                    
+                    Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../Singleton/">
+            
+                <a href="../Singleton/">
+            
+                    
+                    Singleton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../State/">
+            
+                <a href="../State/">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../Strategy/">
+            
+                <a href="../Strategy/">
+            
+                    
+                    Strategy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../TemplateMethod/">
+            
+                <a href="../TemplateMethod/">
+            
+                    
+                    Template Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../Visitor/">
+            
+                <a href="../Visitor/">
+            
+                    
+                    Visitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../tags.html">
+            
+                <a href="../tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Interpreter</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="interpreter-&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF1A;">Interpreter &#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF1A;</h3>
+<blockquote>
+<p>&#x91DD;&#x5C0D;&#x6A19;&#x7684;&#x8A9E;&#x8A00;&#x5B9A;&#x7FA9;&#x6587;&#x6CD5;, &#x4EE5;&#x53CA;&#x53EF;&#x89E3;&#x8B80;&#x9019;&#x500B;&#x8A9E;&#x53E5;&#x7684;&#x89E3;&#x8B6F;&#x5668;</p>
+</blockquote>
+<p>&#x7D66;&#x5B9A;&#x4E00;&#x500B;&#x8A9E;&#x8A00;, &#x5B9A;&#x7FA9;&#x5B83;&#x7684;&#x6587;&#x6CD5;&#x7684;&#x4E00;&#x7A2E;&#x8868;&#x793A;, &#x4E26;&#x5B9A;&#x7FA9;&#x4E00;&#x500B;&#x89E3;&#x8B6F;&#x5668;, &#x9019;&#x500B;&#x89E3;&#x8B6F;&#x5668;&#x4F7F;&#x7528;&#x8A72;&#x8868;&#x793A;&#x4F86;&#x89E3;&#x91CB;&#x8A9E;&#x8A00;&#x4E2D;&#x7684;&#x53E5;&#x5B50;</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x7A2E;&#x7279;&#x5B9A;&#x985E;&#x578B;&#x7684;&#x554F;&#x984C;&#x767C;&#x751F;&#x7684;&#x983B;&#x7387;&#x5920;&#x9AD8;, &#x90A3;&#x9EBC;&#x53EF;&#x80FD;&#x5C31;&#x503C;&#x5F97;&#x5C07;&#x8A72;&#x554F;&#x984C;&#x7684;&#x5404;&#x500B;&#x5BE6;&#x9AD4;&#x8868;&#x9054;&#x70BA;&#x4E00;&#x500B;&#x7C21;&#x55AE;&#x8A9E;&#x8A00;&#x4E2D;&#x7684;&#x53E5;&#x5B50;. &#x9019;&#x6A23;&#x53EF;&#x4EE5;&#x5EFA;&#x69CB;&#x4E00;&#x500B;&#x89E3;&#x8B6F;&#x5668;,
+&#x8A72;&#x89E3;&#x8B6F;&#x5668;&#x900F;&#x904E;&#x89E3;&#x91CB;&#x9019;&#x4E9B;&#x53E5;&#x5B50;&#x4F86;&#x89E3;&#x6C7A;&#x554F;&#x984C;.</p>
+<p><img src="https://github.com/kimi0230/DesignPatternGolang/blob/master/UML/Interpreter.png?raw=true" alt="UML"></p>
+<h3 id="example">Example</h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Interpreter" target="_blank">https://github.com/kimi0230/DesignPatternGolang/tree/master/Interpreter</a> </p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> interpreter
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-keyword">type</span> Context <span class="hljs-keyword">struct</span> {
+    input  <span class="hljs-keyword">string</span>
+    output <span class="hljs-keyword">string</span>
+}
+
+<span class="hljs-keyword">func</span> (c *Context) Input() <span class="hljs-keyword">string</span> {
+    <span class="hljs-keyword">if</span> c == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>
+    }
+    <span class="hljs-keyword">return</span> c.input
+}
+<span class="hljs-keyword">func</span> (c *Context) SetInput(str <span class="hljs-keyword">string</span>) {
+    <span class="hljs-keyword">if</span> c == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span>
+    }
+    c.input = str
+}
+
+<span class="hljs-keyword">func</span> (c *Context) Output() <span class="hljs-keyword">string</span> {
+    <span class="hljs-keyword">if</span> c == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>
+    }
+    <span class="hljs-keyword">return</span> c.output
+}
+<span class="hljs-keyword">func</span> (c *Context) SetOutput(str <span class="hljs-keyword">string</span>) {
+    <span class="hljs-keyword">if</span> c == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span>
+    }
+    c.output = str
+}
+
+<span class="hljs-comment">// &#x62BD;&#x8C61;&#x904B;&#x7B97;&#x5F0F;</span>
+<span class="hljs-keyword">type</span> AbstractExpression <span class="hljs-keyword">interface</span> {
+    Interpret(*Context)
+}
+
+<span class="hljs-keyword">type</span> TerminalExpression <span class="hljs-keyword">struct</span> {
+}
+
+<span class="hljs-keyword">func</span> (t *TerminalExpression) Interpret(context *Context) {
+    <span class="hljs-keyword">if</span> t == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(<span class="hljs-string">&quot;&#x7D42;&#x7AEF;&#x89E3;&#x8B6F;&#x5668;&quot;</span>)
+}
+
+<span class="hljs-keyword">type</span> NonterminalExpression <span class="hljs-keyword">struct</span> {
+}
+
+<span class="hljs-keyword">func</span> (t *NonterminalExpression) Interpret(context *Context) {
+    <span class="hljs-keyword">if</span> t == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(<span class="hljs-string">&quot;&#x975E;&#x7D42;&#x7AEF;&#x89E3;&#x8B6F;&#x5668;&quot;</span>)
+}
+</code></pre>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; Kimi Tsai all right reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>Updated</i> :  2022-09-30 06:29:46 </span> </footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Flyweight/" class="navigation navigation-prev " aria-label="Previous page: Flyweight">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Iterator/" class="navigation navigation-next " aria-label="Next page: Iterator">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Interpreter","level":"1.13","depth":1,"next":{"title":"Iterator","level":"1.14","depth":1,"path":"Iterator/README.md","ref":"Iterator/README.md","articles":[]},"previous":{"title":"Flyweight","level":"1.12","depth":1,"path":"Flyweight/README.md","ref":"Flyweight/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","search-plus","-sharing","sharing-plus","expandable-chapters","splitter","-anchor-navigation-ex","-toggle-chapters","back-to-top-button","page-footer-ex","favicon-absolute","github","github-buttons","-disqus","-codeblock-filename","code","-copy-code-button","-emphasize","page-toc","intopic-toc","-tbfed-pagefooter","edit-link","auto-scroll-table","wide-page","tags","sitemap-general"],"ignores":["node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"Kimi's Gitbook"},"github":{"url":"https://github.com/kimi0230"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"CONTENTS","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"page-footer-ex":{"copyright":"&copy Kimi Tsai all right reserved.","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>Updated</i> : "},"splitter":{},"wide-page":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"favicon-absolute":{"appleTouchIconMore":{"120x120":"/apple-touch-icon-120.png","180x180":"/apple-touch-icon-180.png"},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{"120x120":"/apple-touch-icon-precomposed-120.png","180x180":"/apple-touch-icon-precomposed-180.png"},"favicon":"/favicon.ico","bookmark":"/bookmark.ico","appleTouchIcon152":"/apple-touch-icon-152.png"},"sitemap-general":{"prefix":"https://kimi0230.github.io/DesignPatternGolang/"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"github-buttons":{"buttons":[{"user":"kimi0230","repo":"DesignPatternGolang","type":"star","size":"small"}]},"tags":{"placement":"top"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"line":true,"all":["facebook","google","twitter","weibo","instapaper","line"]},"edit-link":{"label":"Edit","base":"https://github.com/kimi0230/DesignPatternGolang/edit/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{"mode":"pageTop","showGoTop":true},"search-plus":{}},"theme":"default","author":"Kimi Tsai <kimi0230@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kimi's DesignPatternGolang  Notes","links":{"sidebar":{"Home":"https://kimi0230.github.io/DesignPatternGolang/","GitHub":"https://github.com/kimi0230/DesignPatternGolang","Medium":"https://medium.com/@kimi0230","About me":"https://github.com/kimi0230"}},"gitbook":"*","description":"My gitbook for DesignPatternGolang "},"file":{"path":"Interpreter/README.md","mtime":"2022-09-30T06:29:46.191Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-30T06:30:42.093Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

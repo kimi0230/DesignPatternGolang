@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/AbstractFactory/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Adapter/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Bridge/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Builder/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/ChainofResponsibility/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Command/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Composite/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Decorator/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Facade/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/FactoryMethod/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/FactoryMethod/SimplevsFactory/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Flyweight/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Interpreter/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Iterator/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Mediator/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Memento/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Observer/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Prototype/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Proxy/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Singleton/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/State/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Strategy/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/TemplateMethod/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/Visitor/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://kimi0230.github.io/DesignPatternGolang/tags.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>

@@ -1,0 +1,792 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · Kimi's DesignPatternGolang  Notes</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kimi Tsai <kimi0230@gmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-wide-page/wide.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="AbstractFactory/" />
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"kimi0230","repo":"DesignPatternGolang","type":"star","size":"small"}]};
+    </script>
+
+    
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    
+    
+        <link rel="bookmark" href="/bookmark.ico" type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152.png">
+    
+    
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-precomposed-152.png">
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120.png">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png">
+        
+    
+    
+        
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-precomposed-120.png">
+        
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/apple-touch-icon-precomposed-180.png">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://kimi0230.github.io/DesignPatternGolang/" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/kimi0230/DesignPatternGolang" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://medium.com/@kimi0230" target="_blank" class="custom-link">Medium</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://github.com/kimi0230" target="_blank" class="custom-link">About me</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="AbstractFactory/">
+            
+                <a href="AbstractFactory/">
+            
+                    
+                    Abstract Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Adapter/">
+            
+                <a href="Adapter/">
+            
+                    
+                    Adapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Bridge/">
+            
+                <a href="Bridge/">
+            
+                    
+                    Bridge
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Builder/">
+            
+                <a href="Builder/">
+            
+                    
+                    Builder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ChainofResponsibility/">
+            
+                <a href="ChainofResponsibility/">
+            
+                    
+                    Chainof Responsibility
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Command/">
+            
+                <a href="Command/">
+            
+                    
+                    Command
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Composite/">
+            
+                <a href="Composite/">
+            
+                    
+                    Composite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Decorator/">
+            
+                <a href="Decorator/">
+            
+                    
+                    Decorator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Facade/">
+            
+                <a href="Facade/">
+            
+                    
+                    Facade
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="FactoryMethod/">
+            
+                <a href="FactoryMethod/">
+            
+                    
+                    Factory Method
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="FactoryMethod/SimplevsFactory/">
+            
+                <a href="FactoryMethod/SimplevsFactory/">
+            
+                    
+                    Simplevs Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Flyweight/">
+            
+                <a href="Flyweight/">
+            
+                    
+                    Flyweight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="Interpreter/">
+            
+                <a href="Interpreter/">
+            
+                    
+                    Interpreter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="Iterator/">
+            
+                <a href="Iterator/">
+            
+                    
+                    Iterator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="Mediator/">
+            
+                <a href="Mediator/">
+            
+                    
+                    Mediator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="Memento/">
+            
+                <a href="Memento/">
+            
+                    
+                    Memento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="Observer/">
+            
+                <a href="Observer/">
+            
+                    
+                    Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="Prototype/">
+            
+                <a href="Prototype/">
+            
+                    
+                    Prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="Proxy/">
+            
+                <a href="Proxy/">
+            
+                    
+                    Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="Singleton/">
+            
+                <a href="Singleton/">
+            
+                    
+                    Singleton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="State/">
+            
+                <a href="State/">
+            
+                    
+                    State
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="Strategy/">
+            
+                <a href="Strategy/">
+            
+                    
+                    Strategy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="TemplateMethod/">
+            
+                <a href="TemplateMethod/">
+            
+                    
+                    Template Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="Visitor/">
+            
+                <a href="Visitor/">
+            
+                    
+                    Visitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="tags.html">
+            
+                <a href="tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8A2D;&#x8A08;&#x6A21;&#x5F0F;-design-pattern">&#x8A2D;&#x8A08;&#x6A21;&#x5F0F; (Design Pattern)</h1>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/releace.yml" target="_blank"><img src="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/releace.yml/badge.svg" alt="Build latest tag"></a> <a href="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/build.yml" target="_blank"><img src="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/build.yml/badge.svg" alt="Build my gitbook and deploy to gh-pages"></a> <a href="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/pages/pages-build-deployment" target="_blank"><img src="https://github.com/kimi0230/DesignPatternGolang/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment"></a></p>
+<p>&#x57FA;&#x65BC; &#x7A0B;&#x6770;-&#x5927;&#x8A71;&#x8A2D;&#x8A08;&#x6A21;&#x5F0F; &#x548C; Design Patterns: Elements of Reusable Object-Oriented Software. 
+&#x4F7F;&#x7528; Golang &#x4F86;&#x5BE6;&#x73FE;</p>
+<p><a href="https://kimi0230.github.io/DesignPatternGolang/" target="_blank">https://kimi0230.github.io/DesignPatternGolang/</a></p>
+<hr>
+<h2 id="&#x751F;&#x6210;&#x6A21;&#x5F0F;-creational-patterns">&#x751F;&#x6210;&#x6A21;&#x5F0F; (Creational Patterns)</h2>
+<blockquote>
+<p>&#x727D;&#x6D89;&#x5230;&#x5C07;&#x7269;&#x4EF6;&#x5BE6;&#x9AD4;&#x5316;&#x3002;&#x9019;&#x985E;&#x6A21;&#x5F0F;&#x90FD;&#x63D0;&#x4F9B;&#x4E00;&#x500B;&#x65B9;&#x6CD5;&#xFF0C;&#x5C07;&#x5BA2;&#x6236;&#x5F9E;&#x6240;&#x9700;&#x8981;&#x5BE6;&#x9AD4;&#x5316;&#x7684;&#x7269;&#x4EF6;&#x4E2D;&#x9B06;&#x7D81;&#x51FA;&#x4F86;</p>
+</blockquote>
+<h3 id="factory-method-&#x5DE5;&#x5EE0;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/FactoryMethod" target="_blank">Factory Method &#x5DE5;&#x5EE0;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/FactoryMethod" target="_blank">go</a></p>
+<p>&#x5B9A;&#x7FA9;&#x53EF;&#x6ECB;&#x751F;&#x6210;&#x7269;&#x4EF6;&#x7684;&#x4ECB;&#x9762;, &#x4F46;&#x8B93;&#x5B50;&#x985E;&#x5225;&#x53BB;&#x6C7A;&#x5B9A;&#x8A72;&#x5177;&#x73FE;&#x51FA;&#x54EA;&#x4E00;&#x7A2E;&#x985E;&#x5225;&#x7684;&#x7269;&#x4EF6;. &#x6B64;&#x6A21;&#x5F0F;&#x8B93;&#x985E;&#x5225;&#x5C07;&#x5177;&#x73FE;&#x5316;&#x7A0B;&#x5E8F;&#x4EA4;&#x7D66;&#x5B50;&#x985E;&#x5225;&#x53BB;&#x8655;&#x7F6E;</p>
+<h3 id="prototype-&#x539F;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/Prototype" target="_blank">Prototype &#x539F;&#x578B;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Prototype" target="_blank">go</a></p>
+<p>&#x5236;&#x5B9A;&#x53EF;&#x7528;&#x539F;&#x578B;&#x500B;&#x9AD4;&#x751F;&#x6210;&#x7684;&#x7269;&#x4EF6;&#x985E;&#x578B;, &#x723E;&#x5F8C;&#x53EA;&#x9700;&#x8907;&#x88FD;&#x6B64;&#x539F;&#x578B;&#x5373;&#x53EF;&#x751F;&#x6210;&#x65B0;&#x7269;&#x4EF6;</p>
+<h3 id="builder-&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/Builder" target="_blank">Builder &#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Builder" target="_blank">go</a></p>
+<p>&#x5F9E;&#x8907;&#x96DC;&#x7269;&#x4EF6;&#x7684;&#x4F48;&#x5C40;&#x4E2D;&#x62BD;&#x53D6;&#x51FA;&#x751F;&#x6210;&#x7A0B;&#x5E8F;, &#x4EE5;&#x4FBF;&#x7528;&#x540C;&#x4E00;&#x500B;&#x751F;&#x6210;&#x7A0B;&#x5E8F;&#x88FD;&#x9020;&#x5404;&#x7A2E;&#x4E0D;&#x540C;&#x7684;&#x7269;&#x4EF6;&#x4F48;&#x5C40;</p>
+<h3 id="abstract-factory-&#x62BD;&#x8C61;&#x5DE5;&#x5EE0;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/AbstractFactory" target="_blank">Abstract Factory &#x62BD;&#x8C61;&#x5DE5;&#x5EE0;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/AbstractFactory" target="_blank">go</a></p>
+<p>&#x4EE5;&#x540C;&#x4E00;&#x500B;&#x4ECB;&#x9762;&#x4F86;&#x5EFA;&#x7ACB;&#x4E00;&#x6574;&#x7D44;&#x76F8;&#x95DC;&#x6216;&#x76F8;&#x4F9D;&#x7684;&#x7269;&#x4EF6;, &#x4E0D;&#x9700;&#x8981;&#x9EDE;&#x540D;&#x500B;&#x7269;&#x4EF6;&#x771F;&#x6B63;&#x6240;&#x5C6C;&#x7684;&#x5177;&#x8C61;&#x985E;&#x5225;</p>
+<h3 id="singleton-&#x7368;&#x9AD4;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/Singleton" target="_blank">Singleton &#x7368;&#x9AD4;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Singleton" target="_blank">go</a></p>
+<p>&#x78BA;&#x4FDD;&#x985E;&#x5225;&#x53EA;&#x6703;&#x6709;&#x4E00;&#x500B;&#x7269;&#x4EF6;&#x5BE6;&#x9AD4;&#x5B58;&#x5728;, &#x4E26;&#x63D0;&#x4F9B;&#x55AE;&#x4E00;&#x5B58;&#x53D6;&#x7A97;&#x53E3;</p>
+<hr>
+<h2 id="&#x7D50;&#x69CB;&#x6A21;&#x5F0F;-structural-patterns">&#x7D50;&#x69CB;&#x6A21;&#x5F0F; (Structural Patterns)</h2>
+<blockquote>
+<p>&#x8B93;&#x4F60;&#x5408;&#x6210;&#x985E;&#x5225;&#x6216;&#x7269;&#x4EF6;&#x5230;&#x5927;&#x578B;&#x7684;&#x7D50;&#x69CB;</p>
+</blockquote>
+<h3 id="decorator-&#x88DD;&#x98FE;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://kimi0230.github.io/DesignPatternGolang/Decorator" target="_blank">Decorator &#x88DD;&#x98FE;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Decorator" target="_blank">go</a> </p>
+<p>&#x5C07;&#x984D;&#x5916;&#x6B0A;&#x8CAC;&#x52D5;&#x614B;&#x9644;&#x52A0;&#x65BC;&#x7269;&#x4EF6;&#x8EAB;&#x4E0A;, &#x4E0D;&#x5FC5;&#x884D;&#x751F;&#x5B50;&#x985E;&#x5225;&#x5373;&#x53EF;&#x5F48;&#x6027;&#x64F4;&#x589E;&#x529F;&#x80FD;</p>
+<h3 id="proxy-&#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Proxy" target="_blank">Proxy &#x4EE3;&#x7406;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Proxy" target="_blank">go</a> </p>
+<p>&#x66FF;&#x5176;&#x4ED6;&#x7269;&#x4EF6;&#x9810;&#x7559;&#x4EE3;&#x7406;&#x8005;&#x7A7A;&#x4F4D;, &#x5C31;&#x6B64;&#x63A7;&#x5236;&#x5B58;&#x53D6;&#x5176;&#x4ED6;&#x7269;&#x4EF6;</p>
+<h3 id="facade-&#x5916;&#x89C0;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Facade" target="_blank">Facade &#x5916;&#x89C0;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Facade" target="_blank">go</a> </p>
+<p>&#x66FF;&#x5B50;&#x7CFB;&#x7D71;&#x88E1;&#x7684;&#x4E00;&#x5806;&#x4ECB;&#x9762;&#x5B9A;&#x7FA9;&#x4E00;&#x5957;&#x7D71;&#x4E00;&#x7684;&#x9AD8;&#x968E;&#x4ECB;&#x9762;, &#x8B93;&#x5B50;&#x7CFB;&#x7D71;&#x66F4;&#x5BB9;&#x6613;&#x4F7F;&#x7528;</p>
+<h3 id="adapter-&#x8F49;&#x63A5;&#x5668;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Adapter" target="_blank">Adapter &#x8F49;&#x63A5;&#x5668;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Adapter" target="_blank">go</a> </p>
+<p>&#x5C07;&#x985E;&#x5225;&#x7684;&#x4ECB;&#x9762;&#x8F49;&#x63DB;&#x6210;&#x5916;&#x754C;&#x6240;&#x9810;&#x671F;&#x7684;&#x53E6;&#x4E00;&#x7A2E;&#x4ECB;&#x9762;, &#x8B93;&#x539F;&#x5148;&#x56FF;&#x65BC;&#x898B;&#x9762;&#x4E0D;&#x76F8;&#x5BB9;&#x554F;&#x984C;&#x800C;&#x7121;&#x6CD5;&#x5354;&#x529B;&#x5408;&#x4F5C;&#x7684;&#x985E;&#x5225;&#x80FD;&#x5920;&#x515C;&#x5728;&#x4E00;&#x8D77;&#x7528;</p>
+<h3 id="composite-&#x7D44;&#x5408;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Composite" target="_blank">Composite &#x7D44;&#x5408;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Composite" target="_blank">go</a> </p>
+<p>&#x5C07;&#x7269;&#x4EF6;&#x7D44;&#x7E54;&#x6210;&#x6A39;&#x72C0;&#x7D50;&#x69CB;, &#x90E8;&#x5206;-&#x5168;&#x9AD4; &#x5C64;&#x7D1A;&#x95DC;&#x4FC2;, &#x8B93;&#x5916;&#x754C;&#x4EE5;&#x4E00;&#x81F4;&#x6027;&#x7684;&#x65B9;&#x5F0F;&#x5C0D;&#x5F85;&#x500B;&#x5225;&#x7269;&#x4EF6;&#x548C;&#x6574;&#x9AD4;&#x7269;&#x4EF6;</p>
+<h3 id="bridge-&#x6A4B;&#x63A5;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Bridge" target="_blank">Bridge &#x6A4B;&#x63A5;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Bridge" target="_blank">go</a> </p>
+<p>&#x5C07;&#x5BE6;&#x4F5C;&#x9AD4;&#x7CFB;&#x8207;&#x62BD;&#x8C61;&#x9AD4;&#x7CFB;&#x5206;&#x96E2;&#x958B;&#x4F86;, &#x8B93;&#x5169;&#x8005;&#x80FD;&#x5404;&#x81EA;&#x66F4;&#x52D5;&#x5404;&#x81EA;&#x6F14;&#x9032;</p>
+<h3 id="flyweight-&#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Flyweight" target="_blank">Flyweight &#x4EAB;&#x5143;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Flyweight" target="_blank">go</a> </p>
+<p>&#x4EE5;&#x5171;&#x4EAB;&#x6A5F;&#x5236;&#x6709;&#x6548;&#x5730;&#x652F;&#x63F4;&#x4E00;&#x5927;&#x5806;&#x5C0F;&#x898F;&#x6A21;&#x7684;&#x7269;&#x4EF6;</p>
+<hr>
+<h2 id="&#x884C;&#x70BA;&#x6A21;&#x5F0F;-behavioral-patterns">&#x884C;&#x70BA;&#x6A21;&#x5F0F; (Behavioral Patterns)</h2>
+<blockquote>
+<p>&#x6A21;&#x8FF0;&#x985E;&#x5225;&#x548C;&#x7269;&#x4EF6;&#x5982;&#x4F55;&#x4E92;&#x52D5;&#xFF0C;&#x4EE5;&#x53CA;&#x5404;&#x81EA;&#x7684;&#x8CAC;&#x4EFB;</p>
+</blockquote>
+<h3 id="strategy-&#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF1A;"><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Strategy" target="_blank">Strategy &#x7B56;&#x7565;&#x6A21;&#x5F0F;&#xFF1A;</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Strategy" target="_blank">go</a> </p>
+<p>&#x5B9A;&#x7FA9;&#x4E00;&#x6574;&#x7D44;&#x6F14;&#x7B97;&#x6CD5;, &#x8B1B;&#x6BCF;&#x4E00;&#x500B;&#x6F14;&#x7B97;&#x6CD5;&#x5C01;&#x88DD;&#x8D77;&#x4F86;, &#x53EF;&#x4E92;&#x63DB;&#x4F7F;&#x7528;, &#x66F4;&#x53EF;&#x5728;&#x4E0D;&#x5F71;&#x97FF;&#x5916;&#x754C;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#x500B;&#x5225;&#x62BD;&#x63DB;&#x6240;&#x4EE5;&#x5F15;&#x7528;&#x7684;&#x6F14;&#x7B97;&#x6CD5;</p>
+<h3 id="template-method-&#x7BC4;&#x672C;&#x65B9;&#x5F0F;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/TemplateMethod" target="_blank">Template Method &#x7BC4;&#x672C;&#x65B9;&#x5F0F;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/TemplateMethod" target="_blank">go</a> </p>
+<p>&#x5C0D;&#x65BC;&#x64CD;&#x4F5C;, &#x53EA;&#x5148;&#x5B9A;&#x7FA9;&#x597D;&#x6F14;&#x7B97;&#x6CD5;&#x7684;&#x8F2A;&#x5ED3;, &#x67D0;&#x4E9B;&#x6B65;&#x9A5F;&#x5247;&#x7559;&#x7D66;&#x5B50;&#x985E;&#x5225;&#x53BB;&#x586B;&#x98FD;, &#x4EE5;&#x4FBF;&#x5728;&#x4E0D;&#x6539;&#x8B8A;&#x6F14;&#x7B97;&#x6CD5;&#x6574;&#x9AD4;&#x69CB;&#x9020;&#x7684;&#x60C5;&#x6CC1;&#x4E0B;&#x8B93;&#x5B50;&#x985E;&#x5225;&#x53BB;&#x7CBE;&#x7149;&#x67D0;&#x4E9B;&#x6B65;&#x9A5F;</p>
+<h3 id="observer-&#x89C0;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Observer" target="_blank">Observer &#x89C0;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Observer" target="_blank">go</a> </p>
+<p>&#x5B9A;&#x7FA9;&#x4E00;&#x5C0D;&#x591A;&#x7684;&#x7269;&#x4EF6;&#x4F9D;&#x5B58;&#x95DC;&#x4FC2;, &#x8B93;&#x7269;&#x4EF6;&#x72C0;&#x614B;&#x4E00;&#x6709;&#x8B8A;&#x52D5;, &#x5C31;&#x81EA;&#x52D5;&#x901A;&#x77E5;&#x5176;&#x4ED6;&#x76F8;&#x4F9D;&#x7269;&#x4EF6;&#x505A;&#x8A72;&#x505A;&#x7684;&#x66F4;&#x65B0;&#x52D5;&#x4F5C;</p>
+<h3 id="state-&#x72C0;&#x614B;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/State" target="_blank">State &#x72C0;&#x614B;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/State" target="_blank">go</a> </p>
+<p>&#x8B93;&#x7269;&#x4EF6;&#x7684;&#x5916;&#x986F;&#x884C;&#x70BA;&#x96A8;&#x5167;&#x90E8;&#x72C0;&#x614B;&#x7684;&#x6539;&#x8B8A;&#x800C;&#x6539;&#x8B8A;, &#x5F77;&#x5F7F;&#x9023;&#x985E;&#x5225;&#x4E5F;&#x8B8A;&#x4E86;&#x4F3C;&#x7684;</p>
+<h3 id="memento-&#x5099;&#x5FD8;&#x9304;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Memento" target="_blank">Memento &#x5099;&#x5FD8;&#x9304;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Memento" target="_blank">go</a> </p>
+<p>&#x5728;&#x4E0D;&#x9055;&#x53CD;&#x5C01;&#x88DD;&#x6027;&#x7684;&#x524D;&#x63D0;&#x4E0B;, &#x6355;&#x6349;&#x7269;&#x4EF6;&#x7684;&#x5167;&#x90E8;&#x72C0;&#x614B;&#x4E26;&#x5B58;&#x5728;&#x5916;&#x9762;,&#x4EE5;&#x4FBF;&#x65E5;&#x5F8C;&#x56DE;&#x5FA9;&#x81F3;&#x6B64;&#x4E00;&#x72C0;&#x614B;</p>
+<h3 id="iterator-&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Iterator" target="_blank">Iterator &#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Iterator" target="_blank">go</a> </p>
+<p>&#x7121;&#x9700;&#x77E5;&#x66C9;&#x805A;&#x5408;&#x7269;&#x4EF6;&#x7684;&#x5167;&#x90E8;&#x7D30;&#x7BC0;, &#x5373;&#x53EF;&#x4F9D;&#x5E8F;&#x5B58;&#x53D6;&#x5167;&#x542B;&#x7684;&#x6BCF;&#x4E00;&#x500B;&#x5143;&#x7D20;</p>
+<h3 id="command-&#x547D;&#x4EE4;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Command" target="_blank">Command &#x547D;&#x4EE4;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Command" target="_blank">go</a> </p>
+<p>&#x5C07;&#x8A0A;&#x606F;&#x5C01;&#x88DD;&#x6210;&#x7269;&#x4EF6;, &#x4EE5;&#x4FBF;&#x80FD;&#x7528;&#x5404;&#x7A2E;&#x4E0D;&#x540C;&#x8A0A;&#x606F;, &#x66AB;&#x4F47;, &#x7D00;&#x5F8B;, &#x5FA9;&#x539F;&#x7B49;&#x65B9;&#x5F0F;&#x52A0;&#x4EE5;&#x53C3;&#x6578;&#x5316;&#x8655;&#x7406;</p>
+<h3 id="chain-of-responsibility-&#x8077;&#x8CAC;&#x93C8;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/ChainofResponsibility" target="_blank">Chain of Responsibility &#x8077;&#x8CAC;&#x93C8;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/ChainofResponsibility" target="_blank">go</a> </p>
+<p>&#x8B93;&#x591A;&#x500B;&#x7269;&#x4EF6;&#x90FD;&#x6709;&#x6A5F;&#x6703;&#x8655;&#x7406;&#x67D0;&#x4E00;&#x8A0A;&#x606F;, &#x4EE5;&#x964D;&#x4F4E;&#x8A0A;&#x606F;&#x767C;&#x9001;&#x8005;&#x548C;&#x63A5;&#x6536;&#x8005;&#x4E4B;&#x9593;&#x7684;&#x8026;&#x5408;&#x95DC;&#x4FC2;. &#x5B83;&#x5C07;&#x63A5;&#x6536;&#x8005;&#x7269;&#x4EF6;&#x4E32;&#x9023;&#x8D77;&#x4F86;, &#x8B93;&#x8A0A;&#x606F;&#x6D41;&#x7D93;&#x5176;&#x4E2D;,&#x76F4;&#x5230;&#x88AB;&#x8655;&#x7406;&#x4E86;&#x70BA;&#x6B62;</p>
+<h3 id="mediator-&#x4EF2;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Mediator" target="_blank">Mediator &#x4EF2;&#x4ECB;&#x8005;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Mediator" target="_blank">go</a> </p>
+<p>&#x5B9A;&#x7FA9;&#x53EF;&#x5C07;&#x4E00;&#x7FA4;&#x7269;&#x4EF6;&#x4E92;&#x52D5;&#x65B9;&#x5F0F;&#x5C01;&#x88DD;&#x8D77;&#x4F86;&#x7684;&#x7269;&#x4EF6;. &#x56E0;&#x70BA;&#x7269;&#x4EF6;&#x5F7C;&#x6B64;&#x4E0D;&#x76F4;&#x63A5;&#x76F8;&#x4E92;&#x6307;&#x6D89;, &#x6240;&#x4EE5;&#x8026;&#x5408;&#x6027;&#x4F4E;, &#x5BB9;&#x6613;&#x9010;&#x4E00;&#x8B8A;&#x66F4;&#x4E92;&#x52D5;&#x95DC;&#x4FC2;</p>
+<h3 id="interpreter-&#x89E3;&#x8B6F;&#x5668;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Interpreter" target="_blank">Interpreter &#x89E3;&#x8B6F;&#x5668;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Interpreter" target="_blank">go</a> </p>
+<p>&#x91DD;&#x5C0D;&#x6A19;&#x7684;&#x8A9E;&#x8A00;&#x5B9A;&#x7FA9;&#x6587;&#x6CD5;, &#x4EE5;&#x53CA;&#x53EF;&#x89E3;&#x8B80;&#x9019;&#x500B;&#x8A9E;&#x53E5;&#x7684;&#x89E3;&#x8B6F;&#x5668;</p>
+<h3 id="visitor-&#x8A2A;&#x554F;&#x8005;&#x6A21;&#x5F0F;"><a href="https://kimi0230.github.io/DesignPatternGolang/Visitor" target="_blank">Visitor &#x8A2A;&#x554F;&#x8005;&#x6A21;&#x5F0F;:</a></h3>
+<p><a href="https://github.com/kimi0230/DesignPatternGolang/tree/master/Visitor" target="_blank">go</a> </p>
+<p>&#x5B9A;&#x7FA9;&#x80FD;&#x9010;&#x4E00;&#x65BD;&#x884C;&#x65BC;&#x7269;&#x4EF6;&#x7D50;&#x69CB;&#x88E1;&#x5404;&#x500B;&#x5143;&#x7D20;&#x7684;&#x64CD;&#x4F5C;, &#x8B93;&#x4F60;&#x4E0D;&#x5FC5;&#x4FEE;&#x6539;&#x4F5C;&#x7528;&#x5C0D;&#x8C61;&#x7684;&#x985E;&#x5225;&#x4ECB;&#x9762;, &#x5C31;&#x80FD;&#x5B9A;&#x7FA9;&#x65B0;&#x7684;&#x64CD;&#x4F5C;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; Kimi Tsai all right reserved. </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>Updated</i> :  2022-09-30 06:29:46 </span> </footer>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="AbstractFactory/" class="navigation navigation-next navigation-unique" aria-label="Next page: Abstract Factory">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Abstract Factory","level":"1.2","depth":1,"path":"AbstractFactory/README.md","ref":"AbstractFactory/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","-lunr","search-plus","-sharing","sharing-plus","expandable-chapters","splitter","-anchor-navigation-ex","-toggle-chapters","back-to-top-button","page-footer-ex","favicon-absolute","github","github-buttons","-disqus","-codeblock-filename","code","-copy-code-button","-emphasize","page-toc","intopic-toc","-tbfed-pagefooter","edit-link","auto-scroll-table","wide-page","tags","sitemap-general"],"ignores":["node_modules"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"shortName":"Kimi's Gitbook"},"github":{"url":"https://github.com/kimi0230"},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"CONTENTS","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"page-footer-ex":{"copyright":"&copy Kimi Tsai all right reserved.","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>Updated</i> : "},"splitter":{},"wide-page":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"favicon-absolute":{"appleTouchIconMore":{"120x120":"/apple-touch-icon-120.png","180x180":"/apple-touch-icon-180.png"},"appleTouchIconPrecomposed152":"/apple-touch-icon-precomposed-152.png","appleTouchIconPrecomposedMore":{"120x120":"/apple-touch-icon-precomposed-120.png","180x180":"/apple-touch-icon-precomposed-180.png"},"favicon":"/favicon.ico","bookmark":"/bookmark.ico","appleTouchIcon152":"/apple-touch-icon-152.png"},"sitemap-general":{"prefix":"https://kimi0230.github.io/DesignPatternGolang/"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"github-buttons":{"buttons":[{"user":"kimi0230","repo":"DesignPatternGolang","type":"star","size":"small"}]},"tags":{"placement":"top"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"line":true,"all":["facebook","google","twitter","weibo","instapaper","line"]},"edit-link":{"label":"Edit","base":"https://github.com/kimi0230/DesignPatternGolang/edit/main/"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{"mode":"pageTop","showGoTop":true},"search-plus":{}},"theme":"default","author":"Kimi Tsai <kimi0230@gmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kimi's DesignPatternGolang  Notes","links":{"sidebar":{"Home":"https://kimi0230.github.io/DesignPatternGolang/","GitHub":"https://github.com/kimi0230/DesignPatternGolang","Medium":"https://medium.com/@kimi0230","About me":"https://github.com/kimi0230"}},"gitbook":"*","description":"My gitbook for DesignPatternGolang "},"file":{"path":"README.md","mtime":"2022-09-30T06:29:46.191Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-30T06:30:42.093Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
