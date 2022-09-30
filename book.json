@@ -40,7 +40,7 @@
         "auto-scroll-table",
         "wide-page",
         "tags",
-        "sitemap"
+        "sitemap-general"
     ],
     "pluginsConfig": {
         "favicon-absolute": {
@@ -107,8 +107,8 @@
             "base": "https://github.com/kimi0230/DesignPatternGolang/edit/main/",
             "label": "Edit"
         },
-        "sitemap": {
-            "hostname": "https://kimi0230.github.io/DesignPatternGolang/"
+        "sitemap-general": {
+            "prefix": "https://kimi0230.github.io/DesignPatternGolang/"
         }
     },
     "pdf": {
